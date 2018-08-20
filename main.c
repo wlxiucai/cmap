@@ -11,20 +11,25 @@ int main(void)
 {
 	char value[100];
 	rb_node* root = NULL;
-	root = map_put(root, "nihao1", "hello1");
-	root = map_put(root, "nihao", "hello");
-	root = map_put(root, "nihao2", "hello2");
-	root = map_put(root, "age", "123");
-	root = map_put(root, "age1", "123");
-	root = map_put(root, "age2", "123");
-	root = map_put(root, "age3", "123");
-	root = map_put(root, "age4", "123");
-	root = map_put(root, "age65", "123");
-	root = map_put(root, "age342", "123");
-	root = map_put(root, "age21", "123");
-	root = map_put(root, "age43", "123");
+	root = map_put(root, "88", "hello1");
+	root = map_put(root, "66", "hello");
+	root = map_put(root, "90", "hello2");
+	root = map_put(root, "30", "123");
+	root = map_put(root, "35", "123");
+	root = map_put(root, "38", "123");
+	root = map_put(root, "40", "123");
+	root = map_put(root, "45", "123");
+	root = map_put(root, "50", "123");
+	root = map_put(root, "36", "123");
+	root = map_put(root, "39", "123");
+	root = map_put(root, "48", "123");
 	map_get(root, "nihao", value);
 	printf("get [nihao] = %s\r\n\r\n", value);
-	map_print(root);
-	printf("\r\n");
+	while (root)
+	{
+		map_print(root);
+		printf("\n\n");
+		root = map_pop(root, "40");
+		sleep(10);
+	}
 }

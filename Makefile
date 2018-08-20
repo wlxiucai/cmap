@@ -9,7 +9,7 @@ SRC_BIN = demo
 
 all:$(SRC_BIN)
 $(SRC_BIN) : $(SRC_OBJ)
-	$(CC) -o $@ $^ $(LDFLAGS)
+	$(CC) -g -o $@ $^ $(LDFLAGS)
 
 tags:
 	ctags -R
